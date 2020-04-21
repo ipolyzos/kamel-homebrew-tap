@@ -10,7 +10,7 @@ class Kamel < Formula
   bottle :unneeded
 
   depends_on "go"
-  depends_on "java"
+  depends_on "openjdk"
 
   def install
     # Build from source & Install
