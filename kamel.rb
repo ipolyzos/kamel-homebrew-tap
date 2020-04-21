@@ -1,15 +1,15 @@
 class Kamel < Formula
   desc "Apache Camel K CLI"
   homepage "https://camel.apache.org/"
-  
+
   url "https://github.com/apache/camel-k.git",
     :tag      => "1.0.0-RC2",
     :revision => "24ddce5afb41c70a0bf30e06f74c6f380f5fd851"
   head "https://github.com/apache/camel-k.git"
-  
+
   bottle :unneeded
 
-  depends_on "java" 
+  depends_on "java"
   depends_on "go"
 
   def install
