@@ -1,5 +1,5 @@
 class Kamel < Formula
-  desc "Apache Camel K is a lightweight integration platform, born on Kubernetes, with serverless superpowers."
+  desc "Apache Camel K CLI"
   homepage "https://camel.apache.org/"
   
   url "https://github.com/apache/camel-k.git",
