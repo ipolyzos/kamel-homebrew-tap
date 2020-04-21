@@ -13,26 +13,26 @@ class Kamel < Formula
   depends_on "java"
 
   def install
-      # Build from source & Install
-      system "make"
-      bin.install "kamel"
+    # Build from source & Install
+    system "make"
+    bin.install "kamel"
 
-      # Install bash completion
-      output = Utils.popen_read("#{bin}/kamel completion bash")
-      (bash_completion/"kamel").write output
+    # Install bash completion
+    output = Utils.popen_read("#{bin}/kamel completion bash")
+    (bash_completion/"kamel").write output
 
-      prefix.install_metafiles
+    prefix.install_metafiles
 
-      # Install zsh completion
-      output = Utils.popen_read("#{bin}/kamel completion zsh")
-      (zsh_completion/"_kamel").write output
+    # Install zsh completion
+    output = Utils.popen_read("#{bin}/kamel completion zsh")
+    (zsh_completion/"_kamel").write output
   end
 
   test do
     run_output = shell_output("#{bin}/kamel 2>&1")
     assert_match "Apache Camel K is a lightweight integration platform, born on Kubernetes, with serverless superpowers."
 
-  version_output = shell_output("#{bin}/kamel version 2>&1")
-      assert_match "Camel K Client 1.0.0-RC2"
+    version_output = shell_output("#{bin}/kamel version 2>&1")
+    assert_match "Camel K Client 1.0.0-RC2"
   end
 end
