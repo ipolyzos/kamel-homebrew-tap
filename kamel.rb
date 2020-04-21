@@ -30,8 +30,7 @@ class Kamel < Formula
 
   test do
     run_output = shell_output("#{bin}/kamel 2>&1")
-    assert_match "Apache Camel K is a lightweight integration platform,\
-           born on Kubernetes, with serverless superpowers.", run_output
+    assert_match "Apache Camel K is a lightweight", run_output
 
     version_output = shell_output("#{bin}/kamel version 2>&1")
     assert_match "Camel K Client 1.0.0-RC2", version_output
